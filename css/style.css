@@ -5,6 +5,26 @@
   left: 45%;
 }
 
+.login-form_input {
+  border: 0 solid black;
+  border-bottom: solid;
+  background-color: rgba(1, 1, 1, 0);
+  font-size: 15px;
+  color: white;
+  width: 135px;
+}
+
+.login-form_button {
+  border-radius: 5px;
+  background-color: rgba(1, 1, 1, 0.3);
+  color: white;
+  margin-left: 10px;
+}
+
+.login-form ::placeholder {
+  color: white;
+}
+
 .hidden {
   display: none;
 }
@@ -147,7 +167,7 @@ img {
 }
 
 #weather span:last-child {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .pannel {

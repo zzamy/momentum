@@ -12,6 +12,40 @@ function onGeoOK(position) {
       city.innerText = `${data.name}`;
       console.log(data.weather[0].main);
       let weatherIcon;
+      /*switch (data.weather[0].main) {
+        case "Clouds":
+          weatherIcon = "☁️";
+        case "Thunderstorm":
+          weatherIcon = "⚡️";
+        case "Drizzle":
+          weatherIcon = "🌦";
+        case "Rain":
+          weatherIcon = "🌧";
+        case "Snow":
+          weatherIcon = "☃️";
+        case "Mist":
+          weatherIcon = "🌫";
+        case "Smoke":
+          weatherIcon = "💨";
+        case "Haze":
+          weatherIcon = "🌫";
+        case "Dust":
+          weatherIcon = "🌫";
+        case "Fog":
+          weatherIcon = "🌫";
+        case "Sand":
+          weatherIcon = "😷";
+        case "Ash":
+          weatherIcon = "😷";
+        case "Squall":
+          weatherIcon = "⛈";
+        case "Tornado":
+          weatherIcon = "🌪";
+        case "Clear":
+          weatherIcon = "☀️";
+        default:
+          weatherIcon = "No Signal";
+      }*/
       if ((data.weather[0].main = "Clouds")) weatherIcon = "☁️";
       else if ((data.weather[0].main = "Thunderstorm")) weatherIcon = "⚡️";
       else if ((data.weather[0].main = "Drizzle")) weatherIcon = "🌦";
