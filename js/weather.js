@@ -9,8 +9,26 @@ function onGeoOK(position) {
     response.json().then((data) => {
       const weather = document.querySelector("#weather span:first-child");
       const city = document.querySelector("#weather span:last-child");
-      city.innerText = `Country:${data.sys.country}, City:${data.name}`;
-      weather.innerText = `Temp:${data.main.temp}°C, Weather:${data.weather[0].main}`;
+      city.innerText = `${data.name}`;
+      console.log(data.weather[0].main);
+      let weatherIcon;
+      if ((data.weather[0].main = "Clouds")) weatherIcon = "☁️";
+      else if ((data.weather[0].main = "Thunderstorm")) weatherIcon = "⚡️";
+      else if ((data.weather[0].main = "Drizzle")) weatherIcon = "🌦";
+      else if ((data.weather[0].main = "Rain")) weatherIcon = "🌧";
+      else if ((data.weather[0].main = "Snow")) weatherIcon = "☃️";
+      else if ((data.weather[0].main = "Mist")) weatherIcon = "🌫";
+      else if ((data.weather[0].main = "Smoke")) weatherIcon = "💨";
+      else if ((data.weather[0].main = "Haze")) weatherIcon = "🌫";
+      else if ((data.weather[0].main = "Dust")) weatherIcon = "🌫";
+      else if ((data.weather[0].main = "Fog")) weatherIcon = "🌫";
+      else if ((data.weather[0].main = "Sand")) weatherIcon = "😷";
+      else if ((data.weather[0].main = "Dust")) weatherIcon = "😷";
+      else if ((data.weather[0].main = "Ash")) weatherIcon = "😷";
+      else if ((data.weather[0].main = "Squall")) weatherIcon = "⛈";
+      else if ((data.weather[0].main = "Tornado")) weatherIcon = "🌪";
+      else if ((data.weather[0].main = "Clear")) weatherIcon = "☀️";
+      weather.innerText = `${weatherIcon} ${data.main.temp}°C`;
     })
   );
 }
