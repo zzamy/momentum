@@ -1,7 +1,7 @@
 .login-form {
   display: flex;
   position: relative;
-  top: 210px;
+  top: 320px;
   left: 45%;
 }
 
@@ -46,7 +46,7 @@ img {
   justify-content: center;
   color: white;
   background-color: rgba(1, 1, 1, 0.2);
-  font-size: 90px;
+  font-size: 200px;
   padding-top: 30px;
 }
 
@@ -61,18 +61,14 @@ img {
   padding-top: 50px;
 }
 
-.pannel_horizontal {
-  width: 33%;
-}
-
-.pannel div:first-child {
-  border-radius: 20px;
+.weather {
+  border-radius: 50%;
   box-shadow: 0px 0px 15px white;
-}
-
-.pannel div:last-child {
-  border-radius: 20px;
-  box-shadow: 0px 0px 15px white;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 20%;
+  top: -320px;
 }
 
 #todo-form {
@@ -101,7 +97,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background-color: rgba(1, 1, 1, 0.2);
   padding-left: 80px;
   margin-bottom: 0;
   margin-left: 10px;
@@ -115,13 +110,11 @@ img {
 }
 
 #todo-list li button {
-  color: gray;
-  font-size: 5px;
+  background-color: rgba(1, 1, 1, 0);
+  border: none;
   position: relative;
   left: 10px;
   top: -2px;
-  border-radius: 10px;
-  border-color: thistle;
 }
 
 #quote {
@@ -131,7 +124,8 @@ img {
   justify-content: center;
   margin-right: 0px;
   background-color: rgba(1, 1, 1, 0.2);
-  padding: 30px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px white;
 }
 
 #quote span {
@@ -163,11 +157,13 @@ img {
 }
 
 #weather span:first-child {
-  font-size: 30px;
+  font-size: 25px;
+  border-bottom: white solid;
 }
 
 #weather span:last-child {
-  margin-top: 30px;
+  margin-top: 10px;
+  font-size: 10px;
 }
 
 .pannel {

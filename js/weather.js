@@ -11,6 +11,7 @@ function onGeoOK(position) {
       const city = document.querySelector("#weather span:last-child");
       city.innerText = `${data.name}`;
       console.log(data.weather[0].main);
+      console.log(parseInt(data.main.temp));
       let weatherIcon;
       /*switch (data.weather[0].main) {
         case "Clouds":
@@ -62,7 +63,7 @@ function onGeoOK(position) {
       else if ((data.weather[0].main = "Squall")) weatherIcon = "⛈";
       else if ((data.weather[0].main = "Tornado")) weatherIcon = "🌪";
       else if ((data.weather[0].main = "Clear")) weatherIcon = "☀️";
-      weather.innerText = `${weatherIcon} ${data.main.temp}°C`;
+      weather.innerText = `${weatherIcon} ${parseInt(data.main.temp)}°C`;
     })
   );
 }
