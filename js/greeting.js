@@ -19,7 +19,19 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello~ ${username}!`;
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, "0");
+  let greetingChoice = hours;
+  if ((hours > 4) & (hours < 12)) {
+    greetingChoice = "Good morning";
+  } else if ((hours >= 12) & (hours <= 18)) {
+    greetingChoice = "Good afternoon";
+  } else if ((hours > 18) & (hours <= 24)) {
+    greetingChoice = "Good evening";
+  } else if ((hours > 0) & (hours <= 4)) {
+    greetingChoice = "Good night";
+  }
+  greeting.innerText = `${greetingChoice}, ${username}!`;
 }
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);

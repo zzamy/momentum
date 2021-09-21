@@ -68,7 +68,9 @@ function onGeoOK(position) {
 }
 
 function onGeoError() {
-  alert("can't find you. No weather for you.");
+  alert(
+    "We can't check your location. if you want to know the weather for your location, Pleae allow to check your location"
+  );
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
