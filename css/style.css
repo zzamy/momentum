@@ -3,6 +3,7 @@
   position: relative;
   top: 320px;
   left: 45%;
+  width: fit-content;
 }
 
 .login-form_input {
