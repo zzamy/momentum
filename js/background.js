@@ -9,5 +9,5 @@ bgImage.src = `img/${chosenImage}`;
 document.body.appendChild(bgImage);*/
 
 document.body.style = `background-image: url("img/${Math.ceil(
-  Math.random() * 3
+  Math.random() * 15
 )}.jpg");`;
